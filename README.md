@@ -1,5 +1,5 @@
-# resonote v2
-Application for managing notes. Have you seen something cool on the internet and when you wanted to come back to it couldn't find it? From now on you will have all your thoughts at your fingertips.
+# kenny-pl
+Company website of my software house
 
 # stack
-Application made using ReactJS in combination with styled-component.
+This website made by GatsbyJS
