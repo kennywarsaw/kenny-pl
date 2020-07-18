@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 const InnerWrapper = styled.div`
-    width: 450px;
+    width: 400px;
 `
 
 const SmallText = styled.h2`
