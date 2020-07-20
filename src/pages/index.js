@@ -19,4 +19,4 @@ const SplashPage = () => (
     </Wrapper>
 );
 
-export default SplashPage;
+export default SplashPage

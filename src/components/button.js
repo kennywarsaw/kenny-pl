@@ -9,4 +9,4 @@ const Button = styled.button`
     font-size: 1.2rem;
 `
 
-export default Button;
+export default Button

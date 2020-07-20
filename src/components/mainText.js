@@ -30,4 +30,4 @@ class MainText extends Component {
     }
 }
 
-export default MainText;
+export default MainText
