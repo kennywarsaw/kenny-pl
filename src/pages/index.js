@@ -1,22 +1,72 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import styled from 'styled-components'
+import Image from 'gatsby-image'
 import GlobalStyle from '../assets/css/globalStyle'
+import LogoText from '../components/logoText'
 import MainText from '../components/mainText'
 import Button from '../components/button'
+import ContactInfo from '../components/contactInfo'
 
 const Wrapper = styled.div`
+    width: 900px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    height: 100vh;
     align-items: center;
-    height: 50vw;
 `
 
-const SplashPage = () => (
+const ContentWrapper = styled.div`
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+`
+
+const StyledImage = styled(Image)`
+    width: 600px;
+    object-fit: contain;
+`
+
+const ImageWrapper = styled.div`
+    width: 50%;
+    object-fit: contain;
+`
+
+const InnerWrapper = styled.div`
+    display: flex;
+`
+
+const SplashPage = ({ data }) => (
     <Wrapper>
         <GlobalStyle />
-        <MainText />
-        <Button>Zamów wycenę</Button>
+        <ContentWrapper>
+            <LogoText>kenny.pl</LogoText>
+            <MainText>Strony i sklepy internetowe dla firm</MainText>
+            <InnerWrapper>
+                <Button>Zamów wycenę</Button>
+                <ContactInfo>email:<br /> <a href="mailto:hello@kenny.pl">hellO@kenny.pl</a></ContactInfo>
+                <ContactInfo>phone:<br /> <a href="tel:508408403">+48 508 408 403</a></ContactInfo>
+            </InnerWrapper>
+        </ContentWrapper>
+        <ImageWrapper>
+            <StyledImage fluid={data.file.childImageSharp.fluid} />
+        </ImageWrapper>
     </Wrapper>
-);
+)
+
+export const query = graphql`
+  {
+    file(name: {eq: "development"}, childImageSharp: {fixed: {}}) {
+      childImageSharp {
+          fluid(maxWidth: 464, maxHeight: 318, quality: 90) {
+              ...GatsbyImageSharpFluid_noBase64
+              ...GatsbyImageSharpFluidLimitPresentationSize
+          }
+      }
+    }
+  }
+`
 
 export default SplashPage
