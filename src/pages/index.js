@@ -36,6 +36,7 @@ const ImageWrapper = styled.div`
 
 const InnerWrapper = styled.div`
     display: flex;
+    padding-top: 20px;
 `
 
 const SplashPage = ({ data }) => (
@@ -44,10 +45,10 @@ const SplashPage = ({ data }) => (
         <ContentWrapper>
             <LogoText>kenny.pl</LogoText>
             <MainText>Strony i sklepy internetowe dla firm</MainText>
+            <Button>Zamów wycenę</Button>
             <InnerWrapper>
-                <Button>Zamów wycenę</Button>
                 <ContactInfo>email:<br /> <a href="mailto:hello@kenny.pl">hellO@kenny.pl</a></ContactInfo>
-                <ContactInfo>phone:<br /> <a href="tel:508408403">+48 508 408 403</a></ContactInfo>
+                <ContactInfo>phone:<br /> <a href="tel:+48508408403">+48 508 408 403</a></ContactInfo>
             </InnerWrapper>
         </ContentWrapper>
         <ImageWrapper>

@@ -12,7 +12,7 @@ module.exports = {
             resolve: 'gatsby-plugin-web-font-loader',
             options: {
                 google: {
-                    families: ['Open Sans:300,700']
+                    families: ['Inter:300,700']
                 }
             }
         },

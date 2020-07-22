@@ -7,6 +7,12 @@ const Button = styled.button`
     border: none;
     border-radius: 2px;
     font-size: 1.2rem;
+    transition: .3s all;
+
+    :hover {
+        opacity: 0.95;
+        transform: translate(0px, -2px);
+    }
 `
 
 export default Button
