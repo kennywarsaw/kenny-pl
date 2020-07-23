@@ -62,7 +62,7 @@ export const query = graphql`
     file(name: {eq: "development"}, childImageSharp: {fixed: {}}) {
       childImageSharp {
           fluid(maxWidth: 464, maxHeight: 318, quality: 90) {
-              ...GatsbyImageSharpFluid_noBase64
+              ...GatsbyImageSharpFluid_tracedSVG
               ...GatsbyImageSharpFluidLimitPresentationSize
           }
       }
