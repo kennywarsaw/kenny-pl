@@ -14,6 +14,7 @@ const StyledLabel = styled.label`
     margin: 30px 0 10px;
     display: block;
     font-size: 1.3rem;
+    font-weight: 600;
 `
 
 const StyledInput = styled.input`
@@ -42,7 +43,7 @@ const EstimatePage = () => (
         <StyledInput type="e-mail" name="email" id="email" placeholder="hello@kenny.pl" />
         <StyledLabel htmlFor="message">Wiadomość</StyledLabel>
         <StyledInput as="textarea" type="text" name="message" id="message" placeholder="Opisz swój projekt, problemy i oczekiwania" />
-        <Button>Wyślij</Button>
+        <Button type="submit">Wyślij</Button>
     </StyledForm>
 )
 

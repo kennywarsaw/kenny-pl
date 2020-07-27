@@ -45,7 +45,7 @@ const SplashPage = ({ data }) => (
         <ContentWrapper>
             <LogoText>kenny.pl</LogoText>
             <MainText>Strony i sklepy internetowe dla firm</MainText>
-            <Button>Zamów wycenę</Button>
+            <Button onClick="openModalFn">Zamów wycenę</Button>
             <InnerWrapper>
                 <ContactInfo>email:<br /> <a href="mailto:hello@kenny.pl">hellO@kenny.pl</a></ContactInfo>
                 <ContactInfo>phone:<br /> <a href="tel:+48508408403">+48 508 408 403</a></ContactInfo>
