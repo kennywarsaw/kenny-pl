@@ -7,6 +7,7 @@ import LogoText from '../components/logoText'
 import MainText from '../components/mainText'
 import Button from '../components/button'
 import ContactInfo from '../components/contactInfo'
+import Modal from '../components/modal'
 
 const Wrapper = styled.div`
     width: 900px;
@@ -39,23 +40,46 @@ const InnerWrapper = styled.div`
     padding-top: 20px;
 `
 
-const SplashPage = ({ data }) => (
-    <Wrapper>
-        <GlobalStyle />
-        <ContentWrapper>
-            <LogoText>kenny.pl</LogoText>
-            <MainText>Strony i sklepy internetowe dla firm</MainText>
-            <Button onClick="openModalFn">Zamów wycenę</Button>
-            <InnerWrapper>
-                <ContactInfo>email:<br /> <a href="mailto:hello@kenny.pl">hellO@kenny.pl</a></ContactInfo>
-                <ContactInfo>phone:<br /> <a href="tel:+48508408403">+48 508 408 403</a></ContactInfo>
-            </InnerWrapper>
-        </ContentWrapper>
-        <ImageWrapper>
-            <StyledImage fluid={data.file.childImageSharp.fluid} />
-        </ImageWrapper>
-    </Wrapper>
-)
+class SplashPage extends React.Component {
+    state = {
+        isModalOpen: false,
+    }
+
+    openModal = () => {
+        this.setState({
+            isModalOpen: true,
+        })
+    }
+
+    closeModal = () => {
+        this.setState({
+            isModalOpen: false,
+        })
+    }
+
+    render() {
+        const { isModalOpen } = this.state;
+
+        return (
+            <Wrapper>
+                <GlobalStyle />
+                <ContentWrapper>
+                    <LogoText>kenny.pl</LogoText>
+                    <MainText>Strony i sklepy internetowe dla firm</MainText>
+                    <Button openModalFn={this.openModal} />
+                    {isModalOpen && <Modal closeModalFn={this.closeModal} />}
+                    <InnerWrapper>
+                        <ContactInfo>email:<br /> <a href="mailto:hello@kenny.pl">hellO@kenny.pl</a></ContactInfo>
+                        <ContactInfo>phone:<br /> <a href="tel:+48508408403">+48 508 408 403</a></ContactInfo>
+                    </InnerWrapper>
+                </ContentWrapper>
+                <ImageWrapper>
+                    {/* <StyledImage fluid={data.file.childImageSharp.fluid} /> */}
+                </ImageWrapper>
+            </Wrapper>
+        )
+    }
+}
 
 export const query = graphql`
   {

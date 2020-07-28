@@ -1,6 +1,7 @@
+import React from 'react'
 import styled from 'styled-components'
 
-const Button = styled.button`
+const StyledButton = styled.button`
     background-color: hsl(242, 100%, 66%);
     padding: 13px 31px;
     color: hsl(0, 100%, 100%);
@@ -14,5 +15,25 @@ const Button = styled.button`
         transform: translate(0px, -2px);
     }
 `
+
+const Button = ({ href, openModalFn }) => (
+    <>
+        {
+            href ? (
+                <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Zamów wycenę
+                </a>
+            ) : (
+                    <StyledButton onClick={openModalFn}>
+                        Zamów wycenę
+                    </StyledButton>
+                )
+        }
+    </>
+)
 
 export default Button

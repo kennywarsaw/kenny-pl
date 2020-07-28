@@ -5,9 +5,12 @@ import Button from '../components/button'
 
 const StyledForm = styled.form`
     margin: 0 auto;
-    background-color: hsl(255, 100%, 100%);
+    background-color: hsl(255, 1%, 96%);
     font-family: 'Inter';
     max-width: 500px;
+    padding: 25px;
+    border-radius: 4px;
+    box-shadow: 0 19px 25px -17px rgba(2, 31, 63, 0.1);
 `
 
 const StyledLabel = styled.label`
