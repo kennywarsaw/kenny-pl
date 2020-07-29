@@ -13,6 +13,7 @@ const Wrapper = styled.div`
     background-color: hsl(0, 100%, 100%);
     border-radius: 8px;
     position: fixed;
+    z-index: 9999;
 `
 
 const CloseButton = styled.div`

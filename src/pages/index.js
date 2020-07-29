@@ -58,7 +58,8 @@ class SplashPage extends React.Component {
     }
 
     render() {
-        const { isModalOpen, data } = this.state;
+        const { isModalOpen } = this.state;
+        const { data } = this.props;
 
         return (
             <Wrapper>
