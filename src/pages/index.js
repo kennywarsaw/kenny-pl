@@ -58,7 +58,7 @@ class SplashPage extends React.Component {
     }
 
     render() {
-        const { isModalOpen } = this.state;
+        const { isModalOpen, data } = this.state;
 
         return (
             <Wrapper>
@@ -74,7 +74,7 @@ class SplashPage extends React.Component {
                     </InnerWrapper>
                 </ContentWrapper>
                 <ImageWrapper>
-                    {/* <StyledImage fluid={data.file.childImageSharp.fluid} /> */}
+                    <StyledImage fluid={data.file.childImageSharp.fluid} />
                 </ImageWrapper>
             </Wrapper>
         )

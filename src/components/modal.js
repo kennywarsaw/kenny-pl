@@ -52,10 +52,10 @@ const CloseButton = styled.div`
 `
 
 const Modal = ({ closeModalFn }) => (
-    <Wrapper>
-        <CloseButton onClick={closeModalFn} />
-        <EstimatePage />
-    </Wrapper>
+  <Wrapper>
+    <CloseButton onClick={closeModalFn} />
+    <EstimatePage />
+  </Wrapper>
 )
 
 export default Modal
