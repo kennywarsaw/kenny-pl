@@ -1,13 +1,15 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
-    html {
-        box-sizing: border-box;
-        font-size: 62.5%; /* 1rem = 10px */
-    }
-
     *, *::before, *::after {
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    html {
         box-sizing: inherit;
+        font-size: 62.5%; /* 1rem = 10px */
     }
 
     body {

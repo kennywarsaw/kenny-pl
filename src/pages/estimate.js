@@ -46,7 +46,7 @@ const EstimatePage = () => (
         <StyledInput type="e-mail" name="email" id="email" placeholder="hello@kenny.pl" />
         <StyledLabel htmlFor="message">Wiadomość</StyledLabel>
         <StyledInput as="textarea" type="text" name="message" id="message" placeholder="Opisz swój projekt, problemy i oczekiwania" />
-        <Button type="submit">Wyślij</Button>
+        <Button type="submit" secondary>Wyślij formularz</Button>
     </StyledForm>
 )
 

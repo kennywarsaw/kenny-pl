@@ -50,6 +50,12 @@ const CloseButton = styled.div`
     ::after {
       transform: rotate(-45deg);
     }
+
+    :hover::before,
+    :hover::after {
+      cursor: pointer;
+      background: hsl(242, 100%, 66%);
+    }
 `
 
 const Modal = ({ closeModalFn }) => (

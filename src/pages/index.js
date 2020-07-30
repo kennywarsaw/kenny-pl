@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Image from 'gatsby-image'
 import GlobalStyle from '../assets/css/globalStyle'
 import LogoText from '../components/logoText'
 import MainText from '../components/mainText'
-import Button from '../components/button'
+import ButtonFn from '../components/buttonFn'
 import ContactInfo from '../components/contactInfo'
 import Modal from '../components/modal'
 
@@ -40,7 +40,7 @@ const InnerWrapper = styled.div`
     padding-top: 20px;
 `
 
-class SplashPage extends React.Component {
+class SplashPage extends Component {
     state = {
         isModalOpen: false,
     }
@@ -67,7 +67,7 @@ class SplashPage extends React.Component {
                 <ContentWrapper>
                     <LogoText>kenny.pl</LogoText>
                     <MainText>Strony i sklepy internetowe dla firm</MainText>
-                    <Button openModalFn={this.openModal} />
+                    <ButtonFn openModalFn={this.openModal} />
                     {isModalOpen && <Modal closeModalFn={this.closeModal} />}
                     <InnerWrapper>
                         <ContactInfo>email:<br /> <a href="mailto:hello@kenny.pl">hellO@kenny.pl</a></ContactInfo>
