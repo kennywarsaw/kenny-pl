@@ -18,6 +18,10 @@ const StyledLabel = styled.label`
     display: block;
     font-size: 1.3rem;
     font-weight: 600;
+
+    .keps {
+        color: #ff0000 !important;
+    }
 `
 
 const StyledInput = styled.input`
@@ -46,6 +50,8 @@ const EstimatePage = () => (
         <StyledInput type="e-mail" name="email" id="email" placeholder="hello@kenny.pl" />
         <StyledLabel htmlFor="message">Wiadomość</StyledLabel>
         <StyledInput as="textarea" type="text" name="message" id="message" placeholder="Opisz swój projekt, problemy i oczekiwania" />
+        <StyledInput type="checkbox" name="data" id="data"></StyledInput>
+        <StyledLabel for="data">Wyrażam zgodę na przetwarzanie moich danych osobowych w celu otrzymywania informacji handlowych od KENNY.PL Kamil Hajduk</StyledLabel>
         <Button type="submit" secondary>Wyślij formularz</Button>
     </StyledForm>
 )
